@@ -91,7 +91,6 @@ export const data = {
       description:
         "Samsung's new variant which goes beyond Galaxy to the Universe",
       price: (1249 * 83.04).toPrecision(8),
-      numReviews: 10,
       discountPercentage: 15.46,
       rating: 4.09,
       countInStock: 36,
