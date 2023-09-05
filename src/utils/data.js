@@ -75,7 +75,7 @@ export const data = {
       rating: 4.44,
       countInStock: 34,
       brand: 'Apple',
-      numReviews: 10,
+      numReviews: 12,
       category: 'smartphones',
       thumbnail: 'https://i.dummyjson.com/data/products/2/thumbnail.jpg',
       images: [
@@ -96,7 +96,7 @@ export const data = {
       rating: 4.09,
       countInStock: 36,
       brand: 'Samsung',
-      numReviews: 10,
+      numReviews: 15,
       category: 'smartphones',
       thumbnail: 'https://i.dummyjson.com/data/products/3/thumbnail.jpg',
       images: ['https://i.dummyjson.com/data/products/3/1.jpg'],
@@ -106,7 +106,7 @@ export const data = {
       name: 'OPPOF19',
       description: 'OPPO F19 is officially announced on April 2021.',
       price: (280 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 23,
       discountPercentage: 17.91,
       rating: 4.3,
       countInStock: 123,
@@ -127,7 +127,7 @@ export const data = {
       description:
         'Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.',
       price: (499 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 33,
       discountPercentage: 10.58,
       rating: 4.09,
       countInStock: 32,
@@ -146,7 +146,7 @@ export const data = {
       description:
         'MacBook Pro 2021 with mini-LED display may launch between September, November',
       price: (1749 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 44,
       discountPercentage: 11.02,
       rating: 4.57,
       countInStock: 83,
@@ -166,7 +166,7 @@ export const data = {
       description:
         'Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched',
       price: (1499 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 12,
       discountPercentage: 4.15,
       rating: 4.25,
       countInStock: 50,
@@ -186,7 +186,7 @@ export const data = {
       description:
         'Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.',
       price: (1499 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 16,
       discountPercentage: 10.23,
       rating: 4.43,
       countInStock: 68,
@@ -207,7 +207,7 @@ export const data = {
       description:
         'Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty',
       price: (1099 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 76,
       discountPercentage: 11.83,
       rating: 4.54,
       countInStock: 96,
@@ -228,7 +228,7 @@ export const data = {
       description:
         'HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10',
       price: (1099 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 54,
       discountPercentage: 6.18,
       rating: 4.43,
       countInStock: 89,
@@ -248,7 +248,7 @@ export const data = {
       description:
         'Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil',
       price: (13 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 67,
       discountPercentage: 8.4,
       rating: 4.26,
       countInStock: 65,
@@ -267,7 +267,7 @@ export const data = {
       name: 'Brown Perfume',
       description: 'Royal_Mirage Sport Brown Perfume for Men & Women - 120ml',
       price: (40 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 23,
       discountPercentage: 15.66,
       rating: 4,
       countInStock: 52,
@@ -288,7 +288,7 @@ export const data = {
       description:
         'Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men',
       price: (13 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 27,
       discountPercentage: 8.14,
       rating: 4.59,
       countInStock: 61,
@@ -309,7 +309,7 @@ export const data = {
       description:
         'Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil',
       price: (120 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 87,
       discountPercentage: 15.6,
       rating: 4.21,
       countInStock: 114,
@@ -329,7 +329,7 @@ export const data = {
       description:
         'Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality',
       price: (30 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 54,
       discountPercentage: 10.99,
       rating: 4.7,
       countInStock: 105,
@@ -350,7 +350,7 @@ export const data = {
       description:
         "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
       price: (19 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 45,
       discountPercentage: 13.31,
       rating: 4.83,
       countInStock: 110,
@@ -371,7 +371,7 @@ export const data = {
       description:
         'Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,',
       price: (12 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 13,
       discountPercentage: 4.09,
       rating: 4.52,
       countInStock: 78,
@@ -391,7 +391,7 @@ export const data = {
       description:
         'Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.',
       price: (40 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 78,
       discountPercentage: 13.1,
       rating: 4.56,
       countInStock: 88,
@@ -414,9 +414,7 @@ export const data = {
       price: (46 * 83.04).toPrecision(8),
       numReviews: 10,
       discountPercentage: 10.68,
-      numReviews: 10,
       rating: 4.42,
-
       countInStock: 54,
       brand: 'ROREC White Rice',
       category: 'skincare',
@@ -434,7 +432,7 @@ export const data = {
       description:
         "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
       price: (70 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 45,
       discountPercentage: 16.99,
       rating: 4.06,
       countInStock: 140,
@@ -472,7 +470,7 @@ export const data = {
       name: 'Elbow Macaroni - 400 gm',
       description: 'Product details of Bake Parlor Big Elbow Macaroni - 400 gm',
       price: (14 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 18,
       discountPercentage: 15.58,
       rating: 4.57,
       countInStock: 146,
@@ -491,7 +489,7 @@ export const data = {
       description:
         'Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item',
       price: (14 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 34,
       discountPercentage: 8.04,
       rating: 4.85,
       countInStock: 26,
@@ -512,7 +510,7 @@ export const data = {
       description:
         'original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji',
       price: (46 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 76,
       discountPercentage: 16.8,
       rating: 4.94,
       countInStock: 113,
@@ -554,7 +552,7 @@ export const data = {
       description:
         'Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf',
       price: (41 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 2,
       discountPercentage: 17.86,
       rating: 4.08,
       countInStock: 131,
@@ -576,7 +574,7 @@ export const data = {
       description:
         'Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm',
       price: (51 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 6,
       discountPercentage: 15.58,
       rating: 4.41,
       countInStock: 17,
@@ -597,7 +595,7 @@ export const data = {
       description:
         '3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)',
       price: (20 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 7,
       discountPercentage: 16.49,
       rating: 4.82,
       countInStock: 54,
@@ -639,7 +637,7 @@ export const data = {
       description:
         'Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality',
       price: (30 * 83.04).toPrecision(8),
-      numReviews: 10,
+      numReviews: 90,
       discountPercentage: 2.92,
       rating: 4.92,
       countInStock: 54,
