@@ -80,7 +80,7 @@ export default function PlaceOrderScreen() {
                           className="flex items-center"
                         >
                           <Image
-                            src={item.image}
+                            src={item.images[0]}
                             alt={item.name}
                             width={50}
                             height={50}
@@ -94,7 +94,7 @@ export default function PlaceOrderScreen() {
                         </Link>
                       </td>
                       <td className=" p-5 text-right">{item.qty}</td>
-                      <td className="p-5 text-right">${item.price}</td>
+                      <td className="p-5 text-right">₹{item.price}</td>
                       <td className="p-5 text-right">
                         ₹{item.qty * item.price}
                       </td>

@@ -10,7 +10,13 @@ module.exports = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'fakestoreapi.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
-    domains: ['i.dummyjson.com'],
+    domains: ['i.dummyjson.com', 'fakestoreapi.com'],
   },
 }

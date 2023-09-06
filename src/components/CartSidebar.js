@@ -36,13 +36,13 @@ export default function CartSidebar() {
         <div className="py-5 px-2">Cart is empty</div>
       ) : (
         <>
-          <div className="p-2 flex flex-col items-center border-b border-b-gary-600 overflow-hidden">
+          <div className="p-2 flex flex-col items-center border-b border-b-gary-600">
             <div>subtotal</div>
-            <div className="font-bold text-orange-700">₹{itemsPrice}</div>
+            <div className="font-bold text-orange-700 mb-2">₹{itemsPrice}</div>
             <div>
               <Link
                 href="/cart"
-                className="w-full text-center p-1  rounded-2xl border-2"
+                className="w-full text-center p-1  rounded-md border-2"
               >
                 Go to cart
               </Link>
