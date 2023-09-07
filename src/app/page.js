@@ -115,7 +115,10 @@ export default function Home() {
       </div>
       {filteredProducts.length === 0 ? <div>No Products</div> : ''}
       {filteredProducts.length > 0 && (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 border-2 py-4 px-2 pt-8 relative mt-8">
+          <h2 className="absolute -top-5 text-center justify-self-center bg-white text-black text-xl p-1 px-3 rounded-md uppercase">
+            Products
+          </h2>
           {filteredProducts.map((product) => (
             <ProductItem key={product.id} product={product} />
           ))}
