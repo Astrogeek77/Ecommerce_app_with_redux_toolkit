@@ -55,8 +55,7 @@ export default function Home() {
 
   const inactiveCategory =
     'bg-white text-black hover:bg-blue-500 hover:text-white'
-  const activeCategory =
-    'bg-blue-500 text-white hover:bg-blue-700 disabled:opacity-75'
+  const activeCategory = 'bg-blue-500 text-white disabled:opacity-75'
 
   const resetFilters = () => {
     setFilter('')
@@ -111,6 +110,7 @@ export default function Home() {
           // onChange={(e) => setSearchTerm(e.target.value)}
           ref={searchBoxRef}
           placeholder="Search products..."
+          className="max-width-full"
         />
         <button
           onClick={() => searchproducts(searchBoxRef.current.value || '')}

@@ -6,9 +6,16 @@ import Header from './Header'
 import { useEffect } from 'react'
 import { hideLoading } from '@/redux/slices/cartSlice'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 export default function App({ children }) {
   const dispatch = useDispatch()
+  const [windowSize, setWindowSize] = useState([])
+
+  useEffect(() => {
+    setWindowSize([window.innerWidth, window.innerHeight])
+  }, [])
+
   useEffect(() => {
     dispatch(hideLoading())
   }, [dispatch])
@@ -21,7 +28,8 @@ export default function App({ children }) {
         className={`${
           loading
             ? ''
-            : cartItems.length > 0 &&
+            : windowSize[0] > 650 &&
+              cartItems.length > 0 &&
               (pathname === '/' || pathname.indexOf('/product/') >= 0)
             ? 'mr-32'
             : ''
@@ -30,7 +38,7 @@ export default function App({ children }) {
         <Header />
         <main className="p-4">{children}</main>
       </div>
-      <CartSidebar />
+      {windowSize[0] > 650 && <CartSidebar />}
     </div>
   )
 }

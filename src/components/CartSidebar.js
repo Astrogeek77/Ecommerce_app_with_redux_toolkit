@@ -18,7 +18,7 @@ export default function CartSidebar() {
   }
 
   const pathname = usePathname()
-
+  // console.log(window.innerWidth)
   return (
     <div
       className={
@@ -36,7 +36,7 @@ export default function CartSidebar() {
         <div className="py-5 px-2">Cart is empty</div>
       ) : (
         <>
-          <div className="p-2 flex flex-col items-center border-b border-b-gary-600">
+          <div className="p-2 flex-col items-center border-b border-b-gary-600 ">
             <div>subtotal</div>
             <div className="font-bold text-orange-700 mb-2">₹{itemsPrice}</div>
             <div>
