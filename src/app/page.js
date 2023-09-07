@@ -53,11 +53,20 @@ export default function Home() {
     return searchProd
   }
 
+  const inactiveCategory =
+    'bg-white text-black hover:bg-blue-500 hover:text-white'
+  const activeCategory =
+    'bg-blue-500 text-white hover:bg-blue-700 disabled:opacity-75'
+
   const resetFilters = () => {
     setFilter('')
     setSearchTerm('')
     searchproducts('')
     searchBoxRef.current.value = ''
+  }
+
+  const markFilter = (e, category) => {
+    setFilter(category)
   }
 
   useEffect(() => {
@@ -82,8 +91,11 @@ export default function Home() {
         {categories.map((category) => (
           <button
             key={category}
-            onClick={() => setFilter(category)}
-            className="text-lg px-4 py-2 bg-white text-black hover:bg-teal-700 hover:text-white rounded-md capitalize"
+            disabled={category === filter}
+            onClick={(e) => markFilter(e, category)}
+            className={`text-lg px-4 py-2 rounded-md capitalize ${
+              category === filter ? activeCategory : inactiveCategory
+            }`}
           >
             {category}
           </button>
