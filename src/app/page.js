@@ -2,7 +2,7 @@
 
 import ProductItem from '@/components/ProductItem'
 import { data } from '../utils/data'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 // import { set } from 'react-hook-form'
 
 export default function Home() {
@@ -10,6 +10,8 @@ export default function Home() {
   const [categories, setCategories] = useState([])
   const [filter, setFilter] = useState('')
   const [filteredProducts, setFilteredProducts] = useState(products)
+  const searchBoxRef = useRef()
+  const [searchTerm, setSearchTerm] = useState('')
 
   const getCategories = () => {
     let cat = []
@@ -33,6 +35,31 @@ export default function Home() {
     return filtProd
   }
 
+  const searchproducts = (searchTerm) => {
+    if (searchTerm == '') {
+      setFilteredProducts(products)
+      return products
+    }
+    let searchProd = []
+    searchProd = products.filter(
+      (product) =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.price.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.brand.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    setFilteredProducts(searchProd)
+    console.log(searchProd)
+    return searchProd
+  }
+
+  const resetFilters = () => {
+    setFilter('')
+    setSearchTerm('')
+    searchproducts('')
+    searchBoxRef.current.value = ''
+  }
+
   useEffect(() => {
     setCategories(getCategories())
   }, [])
@@ -41,30 +68,59 @@ export default function Home() {
     filterProducts(filter)
   }, [filter])
 
+  useEffect(() => {
+    console.log(searchTerm)
+    searchproducts(searchTerm)
+  }, [searchTerm])
+
   return (
     <>
-      <div className="flex flex-wrap items-center justify-around gap-2 my-6">
+      <div className="flex flex-wrap items-center justify-center gap-2 my-6 border-2 bg-black-500 rounded-md px-2 py-4 relative pt-8">
+        <h2 className="absolute -top-5 bg-white text-black text-xl p-1 px-3 rounded-md uppercase">
+          Categories & Filters
+        </h2>
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setFilter(category)}
-            className="text-xl px-4 py-2 bg-sky-500 hover:bg-sky-700 rounded-md"
+            className="text-lg px-4 py-2 bg-white text-black hover:bg-teal-700 hover:text-white rounded-md capitalize"
           >
             {category}
           </button>
         ))}
+        {/* <button
+          onClick={() => setSearchTerm('')}
+          className="text-xl px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded-md"
+        >
+          Clear Search
+        </button> */}
+        <input
+          type="text"
+          // onChange={(e) => setSearchTerm(e.target.value)}
+          ref={searchBoxRef}
+          placeholder="Search products..."
+        />
         <button
-          onClick={() => setFilter('')}
+          onClick={() => searchproducts(searchBoxRef.current.value || '')}
+          className="text-xl px-4 py-2 bg-green-500 hover:bg-green-700 rounded-md"
+        >
+          Search
+        </button>
+        <button
+          onClick={() => resetFilters()}
           className="text-xl px-4 py-2 bg-red-500 hover:bg-red-700 rounded-md"
         >
-          Clear Filter
+          Clear all Filters
         </button>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filteredProducts.map((product) => (
-          <ProductItem key={product.id} product={product} />
-        ))}
-      </div>
+      {filteredProducts.length === 0 ? <div>No Products</div> : ''}
+      {filteredProducts.length > 0 && (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {filteredProducts.map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
+        </div>
+      )}
     </>
   )
 }
