@@ -27,7 +27,7 @@ export default function ShippingAddressPage() {
 
   const submitHandler = ({ paymentMethod }) => {
     dispatch(savePaymentMethod(paymentMethod))
-
+    
     router.push('/placeorder')
   }
   return (

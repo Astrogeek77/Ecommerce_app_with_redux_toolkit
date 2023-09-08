@@ -4,6 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useDispatch, useSelector } from 'react-redux'
 
+import {
+  removeProductToast,
+  ProductQtyUpdatedToast,
+} from '@/utils/toastOptions'
+
 export default function CartSidebar() {
   const { loading, cartItems, itemsPrice } = useSelector((state) => state.cart)
 
@@ -11,10 +16,12 @@ export default function CartSidebar() {
 
   const addToCartHandler = (product, qty) => {
     dispatch(addToCart({ ...product, qty }))
+    ProductQtyUpdatedToast()
   }
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id))
+    removeProductToast()
   }
 
   const pathname = usePathname()

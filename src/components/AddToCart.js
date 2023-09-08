@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/redux/slices/cartSlice'
 
+import { addProductToast } from '@/utils/toastOptions'
+
 export default function AddToCart({
   product,
   showQty = true,
@@ -29,7 +31,7 @@ export default function AddToCart({
       }
     }
     dispatch(addToCart({ ...product, qty: newQty }))
-
+    addProductToast()
     if (redirect) router.push('/cart')
   }
 

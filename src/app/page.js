@@ -3,6 +3,7 @@
 import ProductItem from '@/components/ProductItem'
 import { data } from '../utils/data'
 import { useEffect, useState, useRef } from 'react'
+import { clearFilterToast, setFilterToast } from '@/utils/toastOptions'
 // import { set } from 'react-hook-form'
 
 export default function Home() {
@@ -62,9 +63,11 @@ export default function Home() {
     setSearchTerm('')
     searchproducts('')
     searchBoxRef.current.value = ''
+    clearFilterToast()
   }
 
   const markFilter = (e, category) => {
+    setFilterToast(category)
     setFilter(category)
   }
 

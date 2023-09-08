@@ -6,15 +6,13 @@ import Header from './Header'
 import { useEffect } from 'react'
 import { hideLoading } from '@/redux/slices/cartSlice'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { ToastContainer } from 'react-toastify'
+
+import useWindowSize from '@/utils/useWindowSize'
 
 export default function App({ children }) {
   const dispatch = useDispatch()
-  const [windowSize, setWindowSize] = useState([])
-
-  useEffect(() => {
-    setWindowSize([window.innerWidth, window.innerHeight])
-  }, [])
+  const [windowSize] = useWindowSize()
 
   useEffect(() => {
     dispatch(hideLoading())
@@ -38,6 +36,7 @@ export default function App({ children }) {
         <Header />
         <main className="p-4">{children}</main>
       </div>
+      <ToastContainer />
       {windowSize[0] > 650 && <CartSidebar />}
     </div>
   )

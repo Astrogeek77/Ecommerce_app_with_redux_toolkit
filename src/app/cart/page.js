@@ -6,6 +6,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useDispatch, useSelector } from 'react-redux'
 
+import {
+  ProductQtyUpdatedToast,
+  removeProductToast,
+} from '@/utils/toastOptions'
+
 export default function CartPage() {
   const dispatch = useDispatch()
   const router = useRouter()
@@ -13,10 +18,12 @@ export default function CartPage() {
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id))
+    removeProductToast()
   }
 
   const addToCartHandler = async (product, qty) => {
     dispatch(addToCart({ ...product, qty }))
+    ProductQtyUpdatedToast()
   }
 
   return (
